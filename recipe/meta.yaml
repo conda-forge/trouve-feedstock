@@ -1,6 +1,6 @@
 {% set name = "trouve" %}
-{% set version = "0.5.1" %}
-{% set sha256 = "2502b99224c9e86b75d95cc08f1bb3ea3943d15d88674839a4cda43bc2333b3a" %}
+{% set version = "0.5.2" %}
+{% set sha256 = "859ad7516d6135cbf34844d1658efdb0e54ad42e96dd45e5b16600768fdf8477" %}
 
 package:
   name: {{ name|lower }}
