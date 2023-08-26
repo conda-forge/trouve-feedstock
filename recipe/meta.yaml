@@ -1,6 +1,6 @@
 {% set name = "trouve" %}
-{% set version = "0.5.2" %}
-{% set sha256 = "859ad7516d6135cbf34844d1658efdb0e54ad42e96dd45e5b16600768fdf8477" %}
+{% set version = "0.6.0" %}
+{% set sha256 = "1678f4b501945ce47250dc26df577a236d55d8af5acf9fceb18236817409d535" %}
 
 package:
   name: {{ name|lower }}
@@ -14,10 +14,10 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - python >=3.5
     - pip
     - numpy
@@ -34,7 +34,7 @@ requirements:
 test:
   imports:
     - trouve
-    
+
 about:
   home: https://github.com/rwhitt2049/trouve
   license: MIT
